@@ -27,6 +27,7 @@ header {
     display: inline;
     width: 30px;
     transition: 0.8s;
+    font-size: 2.2em;
 }
 .material-symbols-outlined {
     display: inline;
@@ -36,6 +37,7 @@ header {
 }
 #carrinho {
     text-align: right;
+    font-size: 2.2em;
 }
 #menu-opcoes {
     display: block;

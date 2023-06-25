@@ -6,7 +6,7 @@ menuHamburguer.addEventListener('click', () => {
 
     if(!aberto) {
         menuOpcoes.style.left = '0px'
-        menuOpcoes.style.marginTop = '30px'
+        menuOpcoes.style.marginTop = '33px'
         menuHamburguer.style.marginBottom = '100px'
         aberto = true
     } else {
