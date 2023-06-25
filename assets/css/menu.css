@@ -1,0 +1,63 @@
+*, ::before, *::after{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    box-sizing: border-box;
+}
+html, body {
+    height: 100%;
+}
+
+#logo {
+    width: 45%;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#menu {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+#menu-hamburguer {
+    display: inline;
+    width: 30px;
+    transition: 0.8s;
+}
+.material-symbols-outlined {
+    display: inline;
+    text-align: left;
+    cursor: pointer;
+    color: #089B9B;
+}
+#carrinho {
+    text-align: right;
+}
+#menu-opcoes {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 200px;
+    padding: 5px;
+    left: -300px;
+    background-color: #044F4F;
+    transition: 0.8s;
+}
+#menu nav {
+    text-align: left;
+    width: 150px;
+    padding: 10px;
+    border-bottom: #E0B572 1px solid;
+}
+#menu a {
+    text-decoration: none;
+    color: white;
+}
+#menu a:hover {
+    font-weight: bold;
+    color: #E0B572;
+}

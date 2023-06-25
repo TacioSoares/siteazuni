@@ -14,7 +14,6 @@ body {
 .wrapper {
     display: flex;
     align-items: center;
-    height: 100%;
 }
 
 .slide-wrapper {
@@ -27,7 +26,6 @@ body {
 
 .slide-list {
     display: flex;
-    transition: 0.5s;
 }
 
 .slide-item {
@@ -62,7 +60,8 @@ body {
 
 .slide-nav-button-previous, .slide-nav-button-next {
     background: transparent;
-    color: white;
+    color: #044F4F;
+    font-weight: bold;
     font-size: 22px;
     cursor: pointer;
     position: absolute;
