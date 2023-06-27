@@ -4,6 +4,7 @@
     padding: 0;
     border: 0;
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 html, body {
     height: 100%;
@@ -34,7 +35,7 @@ body {
     padding: 0 10px;
     width: 90vw;
 }
-.slide-content {
+.slide-content, .slide-information {
     border: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.644) 0px 12px 12px;
     position: relative;
@@ -105,4 +106,36 @@ body {
     .slide-nav-button-previous, .slide-nav-button-next {
         margin-top: -50px;
     }
+}
+
+.slide-wrapper-informations {
+    width: 100%;
+    overflow: hidden;
+}
+
+.slide-list-informations{
+    display: flex;
+    transition: 1s;
+    width: 100%;
+}
+.slide-item-information{
+    flex-shrink: 0;
+    padding: 0 10px;
+    width: 90vw;
+}
+.slide-information{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+}
+.controls-button-slide-information {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.button-information {
+    margin-left: 10px;
+    font-size: 0.8em;
+    color: lightgray;
 }

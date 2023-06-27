@@ -6,13 +6,13 @@ const slideList = document.querySelector('.slide-list')
 const navPreviousButton = document.querySelector('.slide-nav-button-previous')
 const navNextButton = document.querySelector('.slide-nav-button-next')
 const controlsWrapper = document.querySelector('.slide-controls')
+
 let slideItems = document.querySelectorAll('.slide-item')
 let controlButtons
 let slideInterval
 
 
 
-watchSizeOfScreen()
 
 const state = {
     startingPoint: 0,
@@ -21,10 +21,9 @@ const state = {
     moviment: 0,
     currentSlideIndex: 0,
 }
-//console.log(images[0].src)
 
 
-function translateSlide(position){
+function translateSlide(position) {
     state.savedPosition = position
     slideList.style.transform = `translateX(${position}px)`
 }
@@ -187,7 +186,6 @@ function onMouseUp(event){
     const pointsToMove = event.type.includes('touch') ? 50 : 150
     const slide = event.currentTarget
     const slideWidth = slide.clientWidth
-    //console.log(slideWidth)
     if(state.moviment < -pointsToMove) { //---------PRÓXIMO SLIDE
         nextSlide()
     } else if (state.moviment > pointsToMove) { //--------- SLIDE ANTERIOR
@@ -197,7 +195,6 @@ function onMouseUp(event){
     }
 
     slide.removeEventListener('mousemove', onMouseMove)
-    //console.log('soltei o botão')
 }
 
 function onTouchStart(event, index) {
@@ -291,6 +288,7 @@ function setListeners() {
 }
 
 function initSlider() {
+    watchSizeOfScreen()
     createControlButtons()
     createSlidesClones()
     setListeners()
@@ -299,3 +297,5 @@ function initSlider() {
 }
 
 initSlider()
+
+
