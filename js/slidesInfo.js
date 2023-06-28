@@ -3,18 +3,18 @@ const slidesDeInfo = document.querySelectorAll('.slide-item-information')
 const slideInfo = document.querySelector('.slide-list-informations')
 const buttonInfo = document.querySelectorAll('.button-information')
 let slideIndex = 0
+let slideOn = true
 
-
-
-setInterval(function(){
+contaIndex(slideIndex)
+setInterval(function () {
     contaIndex(slideIndex)
-},2500) 
+}, 3000)
 
 
 
-function contaIndex() {  
+function contaIndex() {
     setTimeout(() => {
-        
+
         if (slideIndex < 3) {
             mudaSlide(slideIndex)
             ativeBotao()
@@ -26,7 +26,7 @@ function contaIndex() {
 }
 
 
-function mudaSlide(slideIndex){
+function mudaSlide(slideIndex) {
     slideInfo.style.transform = `translateX(${(pegaPosicaoCentral(slideIndex))}px)`
 }
 
@@ -41,18 +41,18 @@ function pegaPosicaoCentral(slideIndex) {
 }
 
 function ativeBotao() {
-    buttonInfo.forEach(function(botao, index) {
+    buttonInfo.forEach(function (botao, index) {
         botao.style.color = 'lightgray'
-        if(index == slideIndex) {
+        if (index == slideIndex) {
             botao.style.color = '#044F4F'
         }
     });
 }
 
-buttonInfo.forEach(function(button, index){
-    button.addEventListener('click', function(){
+buttonInfo.forEach(function (button, index) {
+    button.addEventListener('click', function () {
         mudaSlide(index)
+        slideIndex = index
         ativeBotao()
     })
 })
-

@@ -7,12 +7,22 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 html, body {
-    height: 100%;
+    min-height: 100%;
 }
 body {
     background-color: white;
 }
+
+header {
+    position: fixed;
+    background-color: white;
+    top: 0;
+    margin-bottom: 50px;
+    z-index: 2;
+}
+
 .wrapper {
+    margin-top: 180px;
     display: flex;
     align-items: center;
 }
@@ -173,12 +183,14 @@ body {
 }
 
 .banner{
+    display: flex;
+    justify-content: center;
     position: relative;
     width: 100%;
 }
 
 .banner img {
-    width: 100%;
+    width: 90%;
 }
 
 .banner h3 {
@@ -225,4 +237,18 @@ body {
 #texto-pulseiras h3, #texto-pulseiras p {
     color: white;
     text-align: center;
+}
+
+/* ---------- Lançamentos ------------ */
+
+.lancamentos {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.lancamentos h2 {
+    margin-bottom: 20px;
+}
+.imagem-lancamento-container img {
+    width: 80%;
 }
