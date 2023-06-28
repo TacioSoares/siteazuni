@@ -35,7 +35,7 @@ body {
     padding: 0 10px;
     width: 90vw;
 }
-.slide-content, .slide-information {
+.slide-content {
     border: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.644) 0px 12px 12px;
     position: relative;
@@ -106,28 +106,48 @@ body {
     .slide-nav-button-previous, .slide-nav-button-next {
         margin-top: -50px;
     }
+    .slide-information h3{
+        font-size: 0.8em;
+    }
 }
 
 .slide-wrapper-informations {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 100%;
     overflow: hidden;
 }
 
 .slide-list-informations{
     display: flex;
+    align-items: center;
     transition: 1s;
     width: 100%;
 }
 .slide-item-information{
+    display: flex;
     flex-shrink: 0;
     padding: 0 10px;
     width: 90vw;
 }
+.slide-item-information div {
+    width: 100%;
+}
+.slide-content-information {
+    border: 1px solid white;
+    box-shadow: rgba(0, 0, 0, 0.644) 0px 12px 12px;
+    position: relative;
+    border-radius: 10px;
+}
 .slide-information{
-    display: flex;
-    flex-direction: column;
     align-items: center;
     padding: 50px;
+}
+.slide-information  {
+    text-align: center;
+    max-height: 176px;
 }
 .controls-button-slide-information {
     display: flex;
@@ -138,4 +158,71 @@ body {
     margin-left: 10px;
     font-size: 0.8em;
     color: lightgray;
+}
+
+
+.ofertas{
+    display: flex;
+    flex-direction: column;
+}
+
+.ofertas-container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 50px;
+}
+
+.banner{
+    position: relative;
+    width: 100%;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.banner h3 {
+    font-size: 2.5em;
+}
+
+#texto-brincos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#texto-brincos h3, #texto-brincos p {
+    color: white;
+    text-align: center;
+}
+
+#texto-colares {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#texto-colares h3, #texto-colares p {
+    color: white;
+    text-align: center;
+}
+
+#texto-pulseiras {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+
+#texto-pulseiras h3, #texto-pulseiras p {
+    color: white;
+    text-align: center;
 }
