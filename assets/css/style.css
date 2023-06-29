@@ -1,20 +1,27 @@
-
-*, ::before, *::after{
+*,
+::before,
+*::after {
     margin: 0;
     padding: 0;
     border: 0;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
 }
-html, body {
+
+html,
+body {
+    display: flex;
+    flex-direction: column;
     min-height: 100%;
 }
+
 body {
     background-color: white;
 }
 
 header {
     position: fixed;
+    width: 100%;
     background-color: white;
     top: 0;
     margin-bottom: 50px;
@@ -22,7 +29,7 @@ header {
 }
 
 .wrapper {
-    margin-top: 180px;
+    margin-top: 220px;
     display: flex;
     align-items: center;
 }
@@ -45,12 +52,14 @@ header {
     padding: 0 10px;
     width: 90vw;
 }
+
 .slide-content {
     border: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.644) 0px 12px 12px;
     position: relative;
     border-radius: 10px;
 }
+
 .slide-item img {
     width: 100%;
     border-radius: 10px;
@@ -65,11 +74,13 @@ header {
     text-align: center;
     border-radius: 0 0 10px 10px;
 }
+
 .slide-description h3 {
     font-size: 2em;
 }
 
-.slide-nav-button-previous, .slide-nav-button-next {
+.slide-nav-button-previous,
+.slide-nav-button-next {
     background: transparent;
     color: #044F4F;
     font-weight: bold;
@@ -84,6 +95,7 @@ header {
     left: 0;
 
 }
+
 .slide-nav-button-next {
     right: 0;
 }
@@ -99,6 +111,7 @@ header {
     font-size: 1em;
     margin: 0 5px;
 }
+
 .slide-control-button.active {
     color: #044F4F
 }
@@ -107,16 +120,21 @@ header {
     .slide-description {
         padding: 10px;
     }
+
     .slide-description h3 {
         font-size: 1.2em;
     }
+
     .slide-description p {
         display: none;
     }
-    .slide-nav-button-previous, .slide-nav-button-next {
+
+    .slide-nav-button-previous,
+    .slide-nav-button-next {
         margin-top: -50px;
     }
-    .slide-information h3{
+
+    .slide-information h3 {
         font-size: 0.8em;
     }
 }
@@ -130,40 +148,47 @@ header {
     overflow: hidden;
 }
 
-.slide-list-informations{
+.slide-list-informations {
     display: flex;
     align-items: center;
     transition: 1s;
     width: 100%;
 }
-.slide-item-information{
+
+.slide-item-information {
     display: flex;
     flex-shrink: 0;
     padding: 0 10px;
     width: 90vw;
 }
+
 .slide-item-information div {
     width: 100%;
 }
+
 .slide-content-information {
     border: 1px solid white;
     box-shadow: rgba(0, 0, 0, 0.644) 0px 12px 12px;
     position: relative;
     border-radius: 10px;
 }
-.slide-information{
+
+.slide-information {
     align-items: center;
     padding: 50px;
 }
-.slide-information  {
+
+.slide-information {
     text-align: center;
     max-height: 176px;
 }
+
 .controls-button-slide-information {
     display: flex;
     justify-content: center;
     margin-top: 20px;
 }
+
 .button-information {
     margin-left: 10px;
     font-size: 0.8em;
@@ -171,7 +196,7 @@ header {
 }
 
 
-.ofertas{
+.ofertas {
     display: flex;
     flex-direction: column;
 }
@@ -182,7 +207,7 @@ header {
     margin-top: 50px;
 }
 
-.banner{
+.banner {
     display: flex;
     justify-content: center;
     position: relative;
@@ -206,7 +231,8 @@ header {
     width: 100%;
 }
 
-#texto-brincos h3, #texto-brincos p {
+#texto-brincos h3,
+#texto-brincos p {
     color: white;
     text-align: center;
 }
@@ -220,7 +246,8 @@ header {
     width: 100%;
 }
 
-#texto-colares h3, #texto-colares p {
+#texto-colares h3,
+#texto-colares p {
     color: white;
     text-align: center;
 }
@@ -234,7 +261,8 @@ header {
     width: 100%;
 }
 
-#texto-pulseiras h3, #texto-pulseiras p {
+#texto-pulseiras h3,
+#texto-pulseiras p {
     color: white;
     text-align: center;
 }
@@ -242,13 +270,49 @@ header {
 /* ---------- Lançamentos ------------ */
 
 .lancamentos {
-    margin-top: 50px;
-    text-align: center;
+    flex-direction: column;
+    margin-top: 100px;
+    display: flex;
+    align-items: center;
 }
 
 .lancamentos h2 {
     margin-bottom: 20px;
 }
+
+.lista-slide-lancamentos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    overflow: hidden;
+}
+.position-item-lancamento {
+    display: flex;
+}
+.item-do-lancamento {
+    animation: slideON 40s 1s infinite alternate;
+    animation-timing-function: ease-in-out;
+    display: flex;
+    flex-basis: 20%;
+    justify-content: space-between;
+    align-items: center;
+    transition: 1s;
+    width: 300%;
+}
+.item-lancamento-container {
+    display: inline;
+    width: 500px;
+}
+.imagem-lancamento-container{
+    width: 100%;
+}
 .imagem-lancamento-container img {
     width: 80%;
+}
+
+@keyframes slideON {
+    to {
+        transform: translateX(-66%);
+    }
 }
