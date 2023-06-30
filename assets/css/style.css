@@ -316,3 +316,54 @@ header {
         transform: translateX(-66%);
     }
 }
+
+.contatos {
+    margin: auto;
+    padding: 50px;
+}
+
+.redes-sociais {
+    height: 450px;
+}
+
+.links {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    height: 100%;
+    width: 100%;
+}
+
+.links a {
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.466);
+    color: #044F4F;
+    padding: 5px;
+    border: 1px solid #089b9b;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: box-shadow 0.5s;
+}
+
+.links a:hover {
+    border: 2px solid #089b9b;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.466);
+}
+
+.links p {
+    font-size: 0.8em;
+    text-align: center;
+}
+
+.links h2 {
+    font-size: 1em;
+    text-align: center;
+}
+.rede-social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.icone-redes-sociais {
+    width: 30%;
+}
