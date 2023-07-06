@@ -301,6 +301,7 @@ header {
     width: 300%;
 }
 .item-lancamento-container {
+    cursor: grab;
     display: inline;
     width: 500px;
 }
