@@ -36,8 +36,8 @@ function iniciaMovimento(event) {
     })
     slide.addEventListener('touchend', function() {
         bannerSlideLancamento.removeEventListener('touchmove', arrastaBanner)
-        
-    })    
+        bannerSlideLancamento.style.animation = 'slideON 40s 1s infinite alternate'
+    })
 }
 
 function arrastaBanner(event) {
