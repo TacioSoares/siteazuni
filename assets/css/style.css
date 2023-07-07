@@ -24,12 +24,11 @@ header {
     width: 100%;
     background-color: white;
     top: 0;
-    margin-bottom: 50px;
     z-index: 2;
 }
 
 .wrapper {
-    margin-top: 220px;
+    margin-top: 250px;
     display: flex;
     align-items: center;
 }
@@ -73,12 +72,16 @@ header {
     width: 100%;
     text-align: center;
     border-radius: 0 0 10px 10px;
+    padding: 10px;
 }
 
 .slide-description h3 {
-    font-size: 2em;
+    font-size: 1.2em;
 }
 
+.slide-description p {
+    display: none;
+}
 .slide-nav-button-previous,
 .slide-nav-button-next {
     background: transparent;
@@ -116,28 +119,7 @@ header {
     color: #044F4F
 }
 
-@media screen and (max-width: 768px) {
-    .slide-description {
-        padding: 10px;
-    }
 
-    .slide-description h3 {
-        font-size: 1.2em;
-    }
-
-    .slide-description p {
-        display: none;
-    }
-
-    .slide-nav-button-previous,
-    .slide-nav-button-next {
-        margin-top: -50px;
-    }
-
-    .slide-information h3 {
-        font-size: 0.8em;
-    }
-}
 
 .slide-wrapper-informations {
     display: flex;
@@ -176,11 +158,12 @@ header {
 .slide-information {
     align-items: center;
     padding: 50px;
-}
-
-.slide-information {
     text-align: center;
     max-height: 176px;
+}
+
+.slide-information h3 {
+    font-size: 0.8em;
 }
 
 .controls-button-slide-information {
@@ -213,9 +196,13 @@ header {
     position: relative;
     width: 100%;
 }
-
-.banner img {
+.banner a {
     width: 90%;
+}
+
+.banner a img {
+    width: 100%;
+    border-radius: 20px;
 }
 
 .banner h3 {
@@ -297,18 +284,23 @@ header {
     flex-basis: 20%;
     justify-content: space-between;
     align-items: center;
-    transition: 1s;
+    /* transition: 1s; */
     width: 300%;
 }
 .item-lancamento-container {
     cursor: grab;
-    display: inline;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     width: 500px;
 }
 .imagem-lancamento-container{
+    max-width: 180px;
     width: 100%;
 }
 .imagem-lancamento-container img {
+    margin: auto;
     width: 80%;
 }
 
@@ -367,4 +359,66 @@ header {
 }
 .icone-redes-sociais {
     width: 30%;
+}
+
+@media screen and (min-width: 630px) {
+    header {
+        position: sticky;
+    }
+    .wrapper {
+        margin-top: 0;
+    }
+    .slide-description {
+        padding: none;
+    }
+
+    .slide-description h3 {
+        font-size: 2em;
+    }
+
+    .slide-description p {
+        display: block;
+    }
+
+    .slide-nav-button-previous,
+    .slide-nav-button-next {
+        margin-top: -50px;
+    }
+
+    .slide-information h3 {
+        font-size: 1em;
+    }
+
+    .ofertas{
+        flex-direction: row;
+    }
+    #texto-colares, #texto-brincos, #texto-pulseiras {
+        margin-top: 20px;
+    }
+    .banner a img {
+        border-radius: 10px;
+    }
+    .banner h3 {
+        font-size: 1.2em;
+    }
+    .banner p {
+        font-size: 0.8em;
+    }
+    .links {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .links a {
+        width: 45%;
+    }
+}    
+
+@media screen and (min-width: 570px) {
+    header {
+        position: sticky;
+    }
+    .wrapper {
+        margin-top: 0;
+    }
 }
